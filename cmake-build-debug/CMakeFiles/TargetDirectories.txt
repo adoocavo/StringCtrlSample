@@ -1,3 +1,0 @@
-C:/Users/chxxi/CLionProjects/C++/StringCtrlSample/cmake-build-debug/CMakeFiles/StringCtrlSample.dir
-C:/Users/chxxi/CLionProjects/C++/StringCtrlSample/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/chxxi/CLionProjects/C++/StringCtrlSample/cmake-build-debug/CMakeFiles/rebuild_cache.dir
