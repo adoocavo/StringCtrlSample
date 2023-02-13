@@ -1,0 +1,11 @@
+# ninja log v5
+7	238	6979665444048595	CMakeFiles/StringCtrlSample.dir/CMyString.cpp.obj	c539783afba7cc64
+21	674	6979665448455764	CMakeFiles/StringCtrlSample.dir/main.cpp.obj	5c6798bafc505e6c
+677	1206	6979665453592868	StringCtrlSample.exe	37055583b6eb93ef
+66	722	6979679157366346	CMakeFiles/StringCtrlSample.dir/CMyString/CMyString.cpp.obj	a47dfd15edebcd60
+91	746	6979679157386302	CMakeFiles/StringCtrlSample.dir/main.cpp.obj	5c6798bafc505e6c
+747	1255	6979679162446984	StringCtrlSample.exe	6d32bebeb9e8feca
+46	676	6979680865038691	CMakeFiles/StringCtrlSample.dir/main.cpp.obj	5c6798bafc505e6c
+700	1173	6979680869710985	StringCtrlSample.exe	6d32bebeb9e8feca
+75	795	6979681022257235	CMakeFiles/StringCtrlSample.dir/main.cpp.obj	5c6798bafc505e6c
+821	1121	6979681025410139	StringCtrlSample.exe	6d32bebeb9e8feca
