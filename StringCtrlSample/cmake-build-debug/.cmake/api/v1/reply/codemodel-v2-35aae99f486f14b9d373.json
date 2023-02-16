@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "StringCtrlSample",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "StringCtrlSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-StringCtrlSample-Debug-c5bee2dfec9fe5dc14e1.json",
+					"name" : "StringCtrlSample",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/khangju/Desktop/23\ub144 \uaca8\uc6b8\ubc29\ud559 \uc2a4\ud130\ub514 /CPP_programming/StringCtrlSample/cmake-build-debug",
+		"source" : "/Users/khangju/Desktop/23\ub144 \uaca8\uc6b8\ubc29\ud559 \uc2a4\ud130\ub514 /CPP_programming/StringCtrlSample"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

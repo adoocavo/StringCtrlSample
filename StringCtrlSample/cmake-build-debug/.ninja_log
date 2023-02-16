@@ -1,0 +1,10 @@
+# ninja log v5
+821	1121	6979681025410139	StringCtrlSample.exe	6d32bebeb9e8feca
+196	223	1676282127865916765	StringCtrlSample	5ca1b27cddbe6a14
+2	222	1676537700059423738	CMakeFiles/StringCtrlSample.dir/CMyString/CMyString.cpp.o	44c8fede5a0a9bf5
+2	231	1676537700068230279	CMakeFiles/StringCtrlSample.dir/main.cpp.o	80a82ad8bd9658c5
+2	184	1676538328551766606	CMakeFiles/StringCtrlSample.dir/CMyString/CMyString.cpp.o	44c8fede5a0a9bf5
+185	215	1676538328583299936	StringCtrlSample	5ca1b27cddbe6a14
+2	227	1676540933405236782	CMakeFiles/StringCtrlSample.dir/CMyString/CMyString.cpp.o	44c8fede5a0a9bf5
+1	235	1676540933413585832	CMakeFiles/StringCtrlSample.dir/main.cpp.o	80a82ad8bd9658c5
+235	268	1676540933447538405	StringCtrlSample	5ca1b27cddbe6a14
