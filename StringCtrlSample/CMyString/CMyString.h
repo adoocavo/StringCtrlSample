@@ -13,15 +13,18 @@ class CMyString
 
     public:
         CMyString() = default;
-        ~CMyString(){    delete [] m_pszData;   }
+        ~CMyString();
         CMyString(const CMyString&);
         explicit CMyString(const char*);
-        CMyString(CMyString&&);
+        CMyString(CMyString&&) noexcept(true);
 
         CMyString& operator= (const CMyString&);
+        CMyString& operator= (CMyString&&);
         explicit operator char*() const { return m_pszData; }
-
-
+        CMyString& operator+= (const CMyString&);
+        CMyString operator+ (const CMyString&);
+        const char operator[](const int index) const;
+        char& operator[](const int index);
 
     private:
         //문자열을 저장하기 위해 동적 할당된 메모리를 가리키는 포인터
@@ -36,6 +39,8 @@ class CMyString
         void SetString(const char *pszParam);
         const char* GetString() const { return m_pszData; }
         void Release();
+        const char* Append(const char*);
+        const int Check_pszParam(const char*) const;
 
 };
 
