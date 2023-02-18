@@ -61,6 +61,12 @@ build CMakeFiles/StringCtrlSample.dir/CMyString/CMyString.cpp.o: CXX_COMPILER__S
   OBJECT_DIR = CMakeFiles/StringCtrlSample.dir
   OBJECT_FILE_DIR = CMakeFiles/StringCtrlSample.dir/CMyString
 
+build CMakeFiles/StringCtrlSample.dir/CMyStringEx/CMyStringEx.cpp.o: CXX_COMPILER__StringCtrlSample_Debug /Users/khangju/Desktop/23년$ 겨울방학$ 스터디$ /CPP_programming/StringCtrlSample/CMyStringEx/CMyStringEx.cpp || cmake_object_order_depends_target_StringCtrlSample
+  DEP_FILE = CMakeFiles/StringCtrlSample.dir/CMyStringEx/CMyStringEx.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu++11
+  OBJECT_DIR = CMakeFiles/StringCtrlSample.dir
+  OBJECT_FILE_DIR = CMakeFiles/StringCtrlSample.dir/CMyStringEx
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target StringCtrlSample
@@ -69,7 +75,7 @@ build CMakeFiles/StringCtrlSample.dir/CMyString/CMyString.cpp.o: CXX_COMPILER__S
 #############################################
 # Link the executable StringCtrlSample
 
-build StringCtrlSample: CXX_EXECUTABLE_LINKER__StringCtrlSample_Debug CMakeFiles/StringCtrlSample.dir/main.cpp.o CMakeFiles/StringCtrlSample.dir/CMyString/CMyString.cpp.o
+build StringCtrlSample: CXX_EXECUTABLE_LINKER__StringCtrlSample_Debug CMakeFiles/StringCtrlSample.dir/main.cpp.o CMakeFiles/StringCtrlSample.dir/CMyString/CMyString.cpp.o CMakeFiles/StringCtrlSample.dir/CMyStringEx/CMyStringEx.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
   OBJECT_DIR = CMakeFiles/StringCtrlSample.dir
   POST_BUILD = :

@@ -117,14 +117,48 @@ CMyString& CMyString::operator+=(const CMyString& rhs)
     return *this;                       //임시객체 생성X
 }
 
+//[] 연산자 - const 객체와 binding(read only)
 const char CMyString::operator[] (const int index) const
 {
+    CheckIndex(index);
     return *(m_pszData + index);
 }
 
+//[] 연산자 - nonConst 객체와 binding(RW)
 char& CMyString::operator[] (const int index)
 {
+    CheckIndex(index);
     return *(m_pszData + index);
+}
+
+// == 연산자
+const int CMyString::operator==(const CMyString & rhs) const
+{
+    //0.각 instance의 m_pszData 유효성 검사
+    if(m_pszData != nullptr && rhs.m_pszData != nullptr)
+    {
+        if(strcmp(this->m_pszData, rhs.m_pszData) == 0)
+        {
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+// != 연산자
+const int CMyString::operator!=(const CMyString &rhs) const
+{
+    //0.각 instance의 m_pszData 유효성 검사
+    if(m_pszData != nullptr && rhs.m_pszData != nullptr)
+    {
+        if(strcmp(this->m_pszData, rhs.m_pszData) != 0)
+        {
+            return 1;
+        }
+    }
+
+    return 0;
 }
 
 
@@ -165,7 +199,7 @@ void CMyString::SetString(const char *pszParam)
     }
 */
     //1. param 유효성 확인 && 문자열 길이 측정
-    m_nLength = Check_pszParam(pszParam);
+    m_nLength = CheckPszParam(pszParam);
 
     //2. 동적할당 && deep copy
     m_pszData = new char[m_nLength+1];
@@ -183,6 +217,7 @@ void CMyString::SetString(const char *pszParam)
 //{
 //    return m_pszData;
 //}
+
 
 //전체 member data 초기화
 void CMyString::Release()
@@ -205,7 +240,7 @@ const char* CMyString::Append(const char* pszParam)
 {
 
     //0. parma 유효성 확인 && param 길이 확인
-    const int paramLength = Check_pszParam(pszParam);
+    const int paramLength = CheckPszParam(pszParam);
 
     //1.this->m_pszData == nullptr인 경우 다른 처리
     if(m_pszData == nullptr)
@@ -239,8 +274,8 @@ const char* CMyString::Append(const char* pszParam)
     return m_pszData;
 }
 
-
-const int CMyString::Check_pszParam(const char* pszParam) const
+//문자열 param 유효성 확인 메서드
+const int CMyString::CheckPszParam(const char* pszParam) const
 {
     //0. 예외처리1
     // 입력 data에 대한 유효성 확인 - callee에서 수행
@@ -263,3 +298,13 @@ const int CMyString::Check_pszParam(const char* pszParam) const
 
     return checkLength;
 }
+
+//index 범위 확인 메서드
+void CMyString::CheckIndex(const int paramIndex) const
+{
+    if(m_nLength <= paramIndex)
+    {
+        throw "SIGSEGV: Index Out Of Range";
+    }
+}
+
