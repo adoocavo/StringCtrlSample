@@ -14,7 +14,17 @@ public:
     using CMyString::operator=;
 
     const int Find(const char*) const;
+/*
+    //문자열 필터 기능추가1
+    //=> base class의 기존 method가 derived class에서 재정의한
+    // method 내에서 call back 되는 구조 만들기
     virtual void SetString(const char *);
+*/
+    //문자열 필터 기능추가2
+    //=> derived class에서 재정의한 method가 base class의 기존 method
+    // 내에서 call back 되는 구조 만들기
+    virtual void OnSetString(char*, const int);
+
 
 };
 

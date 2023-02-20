@@ -75,6 +75,18 @@ int main(int argc, char* argv[])
 */
 //    CMyStringEx strTest{"Test for conversion constructor"};
 
+/*
+    CMyString* strTest_12 = new CMyStringEx;
+    strTest_12->SetString("fuck");
+
+    cout << (char*)(*strTest_12) << endl;
+
+    delete strTest_12;
+*/
+    CMyString a{"Hello"}, b;
+    b = " world" + a;
+
+    cout << (char*)b << endl;
     }
 
     catch(const char* errMsg)

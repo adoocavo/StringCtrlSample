@@ -109,6 +109,20 @@ CMyString CMyString::operator+(const CMyString& rhs)
     return result;                  //copy elision or move constructor call
 }
 
+// 'char* + obj'연산자
+CMyString operator+(const char *pszParam, const CMyString &rhs)
+{
+    //1. 정답 리턴할 객체 생성
+    CMyString result{rhs};
+
+    //2. Append() 실행
+    result.Append(pszParam);
+
+    //3. return
+    return result;                  //copy elison or mover constructor
+}
+
+
 //"obj += obj" 연산자
 CMyString& CMyString::operator+=(const CMyString& rhs)
 {
@@ -165,6 +179,7 @@ const int CMyString::operator!=(const CMyString &rhs) const
 // 문자열/문자열 길이 Setting
 void CMyString::SetString(const char *pszParam)
 {
+
     //0. 기존 정보 해제
     Release();
 /*
@@ -210,6 +225,9 @@ void CMyString::SetString(const char *pszParam)
     //strcpy_s(m_pszData, sizeof(char) * (m_nLength+1), pszParam);
     // m_pszData = pszParam;
 */
+
+    // 참조/포인터로 호출시에 실 형식의 method 호출
+    OnSetString(m_pszData, m_nLength);
 
 }
 

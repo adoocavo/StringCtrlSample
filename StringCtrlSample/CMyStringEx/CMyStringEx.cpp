@@ -21,6 +21,7 @@ const int CMyStringEx::Find(const char *pszParam) const
     return -1;
 }
 
+/*
 void CMyStringEx::SetString(const char *pszParam)
 {
     //0.특정 단어 필터링 기능만 추가
@@ -36,4 +37,15 @@ void CMyStringEx::SetString(const char *pszParam)
         CMyString::SetString(pszParam);
     }
 
+}
+*/
+
+
+//가상함수 오버라이딩 후 기존 base class의 merthod내에서 호출되는 구조로 기능 추가
+void CMyStringEx::OnSetString(char *pszParam, const int nLength)
+{
+    if(strcmp(pszParam, "fuck") == 0)
+    {
+        strncpy(pszParam, "f**k", nLength+1);
+    }
 }

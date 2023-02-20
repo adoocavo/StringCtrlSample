@@ -27,7 +27,7 @@ class CMyString
         char& operator[](const int index);
         const int operator== (const CMyString&) const;
         const int operator!= (const CMyString&) const;
-
+        friend CMyString operator+ (const char*, const CMyString&);
 
 
     private:
@@ -40,13 +40,15 @@ class CMyString
 
     public:
         const int GetLength () const { return m_nLength; };
-        virtual void SetString(const char*);
+        /*virtual*/ void SetString(const char*);
         const char* GetString() const { return m_pszData; }
         void Release();
         const char* Append(const char*);
         const int CheckPszParam(const char*) const;
         void CheckIndex(const int) const;
 
+        //SetString() method에 미래에 추가되는 기능 고려
+        virtual void OnSetString(char*, const int) {;}
 };
 
 
